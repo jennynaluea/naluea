@@ -1731,7 +1731,8 @@ const PEOPLE = {
     add(get("Wietse Hermanns"), []),
     add(get("Arend de Haas"), []),
     add(get("Vincent Arena"), []),
-    add(get("Rob Hurwich"), [])
+    add(get("Rob Hurwich"), []),
+    fresh("Sheri Herndon", "Collaborator", [])
   ];
   ["Annette Kaiser","Dr. Anita Sanchez","Dr. Elizabeth Lindsey","Samantha Sweetwater"].forEach(n => { const p = PEOPLE.advisors.find(x=>x.name===n); p.gap = "Bio to be confirmed"; });
   const PHOTOS = {
@@ -1739,7 +1740,9 @@ const PEOPLE = {
     "Wendy McLean":"images/team/wendy-mclean.jpg", "Franz Allmayer":"images/team/franz-allmayer.jpg",
     "Melanie Carlone":"images/team/melanie-carlone.jpg", "Steve Melville":"images/team/steve-melville.jpg",
     "Dr. Anita Sanchez":"images/team/anita-sanchez.jpg", "Dr. Elizabeth Lindsey":"images/team/elizabeth-lindsey.jpg",
-    "Vincent Arena":"images/team/vincent-arena.jpg", "Rob Hurwich":"images/team/rob-hurwich.jpg"
+    "Vincent Arena":"images/team/vincent-arena.jpg", "Rob Hurwich":"images/team/rob-hurwich.jpg",
+    "Jenny Heinze":"images/team/jenny-heinze.jpg", "Juan Carlos Kaiten Quintanilla":"images/team/juan-carlos-kaiten.jpg",
+    "Alison Burchell":"images/team/alison-burchell.jpg", "Sheri Herndon":"images/team/sheri-herndon.jpg"
   };
   [...PEOPLE.core, ...PEOPLE.advisors, ...PEOPLE.extended].forEach(p => { if (PHOTOS[p.name]) p.photo = PHOTOS[p.name]; });
 })();
