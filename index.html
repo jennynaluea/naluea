@@ -1734,6 +1734,14 @@ const PEOPLE = {
     add(get("Rob Hurwich"), [])
   ];
   ["Annette Kaiser","Dr. Anita Sanchez","Dr. Elizabeth Lindsey","Samantha Sweetwater"].forEach(n => { const p = PEOPLE.advisors.find(x=>x.name===n); p.gap = "Bio to be confirmed"; });
+  const PHOTOS = {
+    "Josie Watson":"images/team/josie-watson.jpg", "Firstman":"images/team/firstman.jpg",
+    "Wendy McLean":"images/team/wendy-mclean.jpg", "Franz Allmayer":"images/team/franz-allmayer.jpg",
+    "Melanie Carlone":"images/team/melanie-carlone.jpg", "Steve Melville":"images/team/steve-melville.jpg",
+    "Dr. Anita Sanchez":"images/team/anita-sanchez.jpg", "Dr. Elizabeth Lindsey":"images/team/elizabeth-lindsey.jpg",
+    "Vincent Arena":"images/team/vincent-arena.jpg", "Rob Hurwich":"images/team/rob-hurwich.jpg"
+  };
+  [...PEOPLE.core, ...PEOPLE.advisors, ...PEOPLE.extended].forEach(p => { if (PHOTOS[p.name]) p.photo = PHOTOS[p.name]; });
 })();
 const NEXT_STEPS = [
   {id:"call", title:"Request a call", desc:"A conversation with a member of the team."},
