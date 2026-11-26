@@ -490,6 +490,112 @@ footer .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;align-items:s
 footer p{max-width:70ch}
 @media (max-width:760px){footer .cols{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* ---------- The Mother Fund ---------- */
+#v-mother-fund section{border-top:0}
+.mf-center{text-align:center}
+.mf-center-prose{margin-inline:auto}
+.mf-center-row{justify-content:center}
+.mf-center-line{text-align:center;max-width:60ch;margin:2rem auto 0;font-family:var(--display);font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--ink-soft)}
+.mf-hero{position:relative;background:var(--night);color:var(--night-ink);overflow:hidden;padding:0}
+.mf-ripples{position:absolute;inset:0;width:100%;height:100%}
+.mf-rings .r{fill:none;stroke:var(--star);stroke-width:1;opacity:.28}
+.mf-rings .r1{opacity:.55}.mf-rings .r2{opacity:.45}.mf-rings .r3{opacity:.36}.mf-rings .r5{stroke:#79C0B8;opacity:.22}.mf-rings .r6{stroke:#79C0B8;opacity:.14}
+.mf-rings .drop{fill:var(--star);opacity:.8}
+@media (prefers-reduced-motion:no-preference){
+  .mf-rings .r{transform-box:fill-box;transform-origin:center;animation:mf-breathe 9s ease-in-out infinite}
+  .mf-rings .r2{animation-delay:-1.5s}.mf-rings .r3{animation-delay:-3s}.mf-rings .r4{animation-delay:-4.5s}.mf-rings .r5{animation-delay:-6s}.mf-rings .r6{animation-delay:-7.5s}
+}
+@keyframes mf-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.mf-hero .wrap{position:relative;min-height:min(88vh,780px);display:flex;flex-direction:column;justify-content:center;padding:4.5rem 0 5rem}
+.mf-kicker{font-family:var(--display);font-style:italic;font-size:1.2rem;color:#79C0B8;margin:0 0 .8rem}
+.mf-title{font-family:var(--display);font-weight:500;font-size:clamp(3rem,8vw,6rem);line-height:1;margin:0 0 .3em;color:var(--night-ink);text-shadow:0 0 40px rgba(217,164,65,.25)}
+.mf-sub{font-family:var(--display);font-style:italic;font-size:clamp(1.4rem,2.8vw,2rem);color:var(--star);margin:0 0 1.6rem}
+.mf-question{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.35;max-width:30ch;margin:0 0 1.4rem;padding-left:1.1rem;border-left:2px solid var(--star)}
+.mf-lead{max-width:60ch;color:var(--night-soft);font-size:1.08rem}
+.mf-hero .btn-primary{background:var(--star);color:var(--night)}
+.mf-hero .btn-quiet{color:var(--night-ink);border-color:rgba(241,231,207,.35)}
+.mf-hero .btn-quiet:hover{background:rgba(241,231,207,.08)}
+.mf-litany{font-family:var(--display);font-style:italic;font-size:1.5rem;line-height:1.45;color:var(--teal);margin:1.4rem 0;padding-left:1.1rem;border-left:2px solid var(--gold)}
+.mf-photo{margin:0;justify-self:center;width:min(100%,440px);aspect-ratio:5/6;overflow:hidden;border-radius:46% 54% 50% 50% / 40% 40% 60% 60%;box-shadow:var(--shadow)}
+.mf-photo svg,.mf-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.mf-photo img + svg{display:none}
+.mf-belonging{background:var(--surface-2)}
+.mf-big-q{font-family:var(--display);font-style:italic;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.35;max-width:32ch;margin:1rem auto 2rem}
+.mf-emph{font-family:var(--display);font-size:1.4rem;line-height:1.4;color:var(--teal);margin-top:1.6rem}
+.mf-gen-art{margin:0 auto 2.6rem;max-width:980px;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+.mf-gen-art img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 58%}
+@media (max-width:640px){.mf-gen-art img{aspect-ratio:1/1}}
+.mf-arc{display:grid;grid-template-columns:1fr 140px 1fr;gap:clamp(1rem,3vw,2.5rem);align-items:center;max-width:960px;margin:0 auto}
+.mf-arc-side{background:var(--surface);border:1px solid var(--line);border-radius:999px 999px 24px 24px / 220px 220px 24px 24px;padding:2.6rem 1.8rem 1.8rem;text-align:center}
+.mf-arc-side h3{margin-bottom:.4rem}
+.mf-arc-side p{margin:0;color:var(--ink-soft)}
+.mf-arc-mark{display:block;width:36px;height:2px;background:var(--gold);margin:0 auto 1rem}
+.mf-arc-side:last-child .mf-arc-mark{background:var(--teal)}
+.mf-arc-heart svg{width:100%;height:auto}
+.mf-arc-heart circle{fill:none;stroke:var(--gold);stroke-width:1.4}
+.mf-arc-heart circle:nth-child(2){stroke:var(--teal);opacity:.8}
+.mf-arc-heart circle:nth-child(3){opacity:.45}
+@media (max-width:760px){.mf-arc{grid-template-columns:1fr}.mf-arc-heart{width:90px;margin:0 auto}}
+.mf-stewards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.4rem;margin-top:2.4rem}
+.mf-steward{text-align:center}
+.mf-steward img{width:150px;height:150px;object-fit:cover;border-radius:50%;margin:0 auto .8rem;box-shadow:var(--shadow)}
+.mf-steward h3{font-size:1.3rem;margin-bottom:.2rem}
+.mf-pebbles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem 1.8rem;margin:2.4rem auto 0;max-width:1000px;position:relative}
+.mf-pebbles::before{content:"";position:absolute;left:4%;right:4%;top:50%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--teal),transparent);opacity:.35;z-index:0}
+.pebble{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line);padding:2rem 1.6rem;text-align:center;box-shadow:var(--shadow)}
+.pebble h3{font-size:1.45rem;margin-bottom:.4rem}
+.pebble p{margin:0;color:var(--ink-soft)}
+.pebble.p1{border-radius:58% 42% 52% 48% / 46% 54% 46% 54%}
+.pebble.p2{border-radius:44% 56% 48% 52% / 55% 45% 55% 45%;transform:translateY(14px)}
+.pebble.p3{border-radius:52% 48% 40% 60% / 48% 58% 42% 52%}
+.pebble.p4{border-radius:48% 52% 58% 42% / 52% 46% 54% 48%;transform:translateY(-6px)}
+.pebble.p5{border-radius:56% 44% 46% 54% / 44% 52% 48% 56%;transform:translateY(10px)}
+.pebble.p6{border-radius:42% 58% 54% 46% / 58% 44% 56% 42%}
+.pebble.p1,.pebble.p4{border-top:3px solid var(--teal)}
+.pebble.p2,.pebble.p5{border-top:3px solid var(--gold)}
+.pebble.p3,.pebble.p6{border-top:3px solid var(--ochre)}
+@media (max-width:900px){.mf-pebbles{grid-template-columns:1fr 1fr}.pebble{transform:none!important}.mf-pebbles::before{display:none}}
+@media (max-width:560px){.mf-pebbles{grid-template-columns:1fr}}
+.mf-vows-sec{background:var(--surface-2)}
+.mf-vows{position:relative;width:min(100%,600px);aspect-ratio:1/1;margin:2.4rem auto 0}
+.mf-vow-rings{position:absolute;inset:0;width:100%;height:100%}
+.mf-vow-rings circle{fill:none;stroke:var(--gold);stroke-width:1;opacity:.45}
+.mf-vow-rings circle:nth-child(2){stroke:var(--teal);opacity:.4}
+.mf-vow-center{position:absolute;left:50%;top:50%;width:27%;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;background:var(--night);color:var(--night-ink);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-style:italic;font-size:clamp(1rem,2.2vw,1.3rem);line-height:1.2;padding:.8rem;box-shadow:0 0 0 6px color-mix(in srgb,var(--star) 25%,transparent)}
+.mf-vow-list{list-style:none;margin:0;padding:0}
+.mf-vow{position:absolute;left:calc(50% + 41.6% * var(--x));top:calc(50% + 41.6% * var(--y));transform:translate(-50%,-50%);width:clamp(120px,26%,160px);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.7rem .8rem;text-align:center;box-shadow:var(--shadow)}
+.mf-vow .num{display:block;font-family:var(--mark);color:var(--gold);font-size:.9rem;letter-spacing:.1em}
+.mf-vow .name{display:block;font-family:var(--display);font-weight:600;font-size:1.08rem;line-height:1.2}
+.mf-vow p{font-size:.92rem;margin:.5rem 0 0;color:var(--ink-soft);text-align:left}
+@media (max-width:640px){
+  .mf-vows{aspect-ratio:auto}
+  .mf-vow-rings{display:none}
+  .mf-vow-center{position:relative;left:auto;top:auto;transform:none;width:150px;margin:0 auto 1.4rem}
+  .mf-vow-list{display:grid;gap:.6rem}
+  .mf-vow{position:relative;left:auto;top:auto;transform:none;width:auto;border-radius:14px;display:flex;gap:.8rem;align-items:baseline;text-align:left;padding:.7rem 1rem}
+  .mf-vow .num{min-width:2.2rem}
+}
+.mf-current{list-style:none;padding:0;margin:0 auto 2.4rem;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.4rem;max-width:980px}
+.mf-current li{font-family:var(--display);font-weight:600;font-size:1.12rem;padding:.55rem 1.1rem;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.mf-current li:last-child{background:var(--teal);color:var(--accent-ink);border-color:var(--teal)}
+.mf-current li + li::before{content:"";display:inline-block;width:28px;height:10px;margin:0 .7rem 0 -.6rem;vertical-align:middle;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 10'%3E%3Cpath d='M1 5c4-4 7 4 11 0s7-4 11 0' fill='none' stroke='%23A97A22' stroke-width='1.5'/%3E%3Cpath d='M23 2l3 3-3 3' fill='none' stroke='%23A97A22' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center/contain}
+@media (max-width:640px){.mf-current{flex-direction:column}.mf-current li + li::before{display:block;width:10px;height:22px;margin:-.2rem auto .5rem;transform:rotate(90deg)}}
+.mf-commit{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.mf-commit > div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.4rem}
+.mf-commit > div:nth-child(odd){border-top:3px solid var(--gold)}
+.mf-commit > div:nth-child(even){border-top:3px solid var(--teal)}
+.mf-commit h3{font-size:1.35rem;margin-bottom:.4rem}
+.mf-commit p{margin:0;font-size:.98rem;color:var(--ink-soft)}
+@media (max-width:980px){.mf-commit{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.mf-commit{grid-template-columns:1fr}}
+.mf-seed{background:var(--surface-2)}
+.mf-blessing{position:relative;background:var(--night);color:var(--night-ink);overflow:hidden;padding:clamp(5rem,12vw,9rem) 0}
+.mf-blessing .wrap{position:relative}
+.mf-prayer{font-family:var(--display);font-style:italic;font-size:clamp(1.6rem,3.4vw,2.5rem);line-height:1.55;margin:0 auto 2.2rem;max-width:36ch;text-wrap:balance}
+.mf-final{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2vw,1.4rem);color:var(--star);margin:0}
+.mf-more{margin-top:1rem;font-family:var(--display);font-size:1.12rem}
+#mf-brief-link[hidden],.mf-stewards[hidden]{display:none}
+@media (min-width:1280px){.nav{gap:0;flex-wrap:nowrap}.nav a{padding:.35rem .45rem;font-size:1.02rem;white-space:nowrap}.nav a.nav-cta{margin-left:.3rem;padding:.4rem .8rem}}
 </style>
 </head>
 <body>
@@ -502,6 +608,7 @@ footer p{max-width:70ch}
       <a href="#system">Living System</a>
       <a href="#constitution">Constitution</a>
       <a href="#participate">Participate</a>
+      <a href="#mother-fund">Mother Fund</a>
       <a href="#nodes">Living Nodes</a>
       <a href="#domains">12 Domains</a>
       <a href="#arc">Roadmap</a>
@@ -594,6 +701,7 @@ footer p{max-width:70ch}
         <a href="#domains"><h3>I want to collaborate</h3><p>The 12 Domains, the Threads we’re weaving, and where your work might fit.</p></a>
         <a href="#stewards"><h3>Who is behind this?</h3><p>The Core Team, Advisors and Extended Circle holding the work.</p></a>
       </div>
+      <p class="mf-more">At the heart of the Living Treasury lives a promise to generations yet to come. <a href="#mother-fund">Meet the Mother Fund</a></p>
     </div>
   </section>
 </div>
@@ -686,6 +794,7 @@ footer p{max-width:70ch}
           <h3>Living Treasury</h3>
           <p>Every contribution enters here. Principal is preserved and invested under a binding Investment Policy Statement, and the yield flows outward to the Living Nodes found ready. A gift given once keeps funding regeneration across generations.</p>
           <p class="small soft">Capital here is non-equity and non-governance: no contribution, at any scale, confers ownership or control.</p>
+          <p class="small">Its perpetual philanthropic current is <a href="#mother-fund">the Mother Fund</a>.</p>
         </div>
         <div class="vessel">
           <div class="verb">The vault</div>
@@ -828,6 +937,7 @@ footer p{max-width:70ch}
         </div>
       </div></article>
 
+      <p class="mf-more" style="text-align:center">The Mother Fund carries these principles as <a href="#mother-fund">seven living vows</a>.</p>
       <p class="const-close">Naluʻea · A Living System of Stewardship · 2026</p>
     </div>
   </section>
@@ -849,7 +959,7 @@ footer p{max-width:70ch}
         <div class="prose"><p>Every contribution first enters the Living Treasury, which remembers the promise accompanying each resource. From the outside you experience one Treasury; inside, each kind of capital is tracked and honored through its own accounting.</p></div>
       </div>
       <div class="covenants">
-        <div class="covenant"><h3>Gift Capital</h3><blockquote>“I freely entrust this resource to serve life.”</blockquote><p>Philanthropic gifts, foundation grants, donations, family and corporate philanthropy, bequests and legacy giving, plus community and crowdfunding participation at any scale. The principal is permanently stewarded and its yield joins the living current.</p><p class="small soft">US donors give through the Naluʻea Ministry; European and international donors through the Naluʻea Foundation.</p><div class="dest">Strengthens the perpetual endowment</div></div>
+        <div class="covenant"><h3>Gift Capital</h3><blockquote>“I freely entrust this resource to serve life.”</blockquote><p>Philanthropic gifts, foundation grants, donations, family and corporate philanthropy, bequests and legacy giving, plus community and crowdfunding participation at any scale. The principal is permanently stewarded and its yield joins the living current.</p><p class="small soft">US donors give through the Naluʻea Ministry; European and international donors through the Naluʻea Foundation.</p><div class="dest">Strengthens the perpetual endowment</div><p class="small" style="margin:.6rem 0 0">Gifts flow into <a href="#mother-fund">the Mother Fund</a>, the endowment at the heart of the Living Treasury.</p></div>
         <div class="covenant"><h3>Stewardship Capital</h3><blockquote>“Please return it when its work is complete.”</blockquote><p>Patient capital, zero-interest loans, revolving catalytic capital, recoverable grants, program-related investments, development finance and climate facilities. As projects mature, the principal returns home, ready for the next place that is ready.</p><div class="dest">Perpetual circulation</div></div>
         <div class="covenant"><h3>Investment Capital</h3><blockquote>“Regeneration and responsible financial return.”</blockquote><p>Family offices, institutional investors, pension funds, insurers, sovereign wealth funds, mission-aligned investors and banks. Capital flows into regenerative enterprise, infrastructure and land stewardship; returns are shared as agreed while principal remains stewarded.</p><div class="dest">Shared yield</div></div>
         <div class="covenant"><h3>Legacy Capital</h3><blockquote>“These resources become part of life beyond my lifetime.”</blockquote><p>Estates, land, businesses, intellectual property, family legacies and conservation easements. Some are permanently stewarded, some generate living yields, some strengthen community stewardship directly.</p><div class="dest">The intergenerational commons</div></div>
@@ -962,6 +1072,208 @@ footer p{max-width:70ch}
 </div>
 
 <!-- ============ NODES ============ -->
+
+<!-- ============ THE MOTHER FUND ============ -->
+<!-- Images: replace each .mf-photo placeholder by adding an <img> inside it (see notes in each figure). -->
+<div class="view" id="v-mother-fund" data-title="The Mother Fund | Naluʻea" data-desc="A living promise to generations yet to come. Discover the Mother Fund, Naluʻea’s emerging perpetual philanthropic endowment in service to the flourishing of Life.">
+
+  <!-- 1 · A Living Promise -->
+  <section class="mf-hero">
+    <svg class="mf-ripples" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="mf-glow" cx="72%" cy="58%" r="55%"><stop offset="0" stop-color="#1F5F63" stop-opacity=".55"/><stop offset=".55" stop-color="#132741" stop-opacity=".35"/><stop offset="1" stop-color="#0B1626" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1440" height="760" fill="url(#mf-glow)"/>
+      <g class="mf-rings" transform="translate(1030 450)">
+        <ellipse class="r r1" rx="60" ry="20"/><ellipse class="r r2" rx="140" ry="46"/><ellipse class="r r3" rx="240" ry="80"/>
+        <ellipse class="r r4" rx="360" ry="120"/><ellipse class="r r5" rx="500" ry="168"/><ellipse class="r r6" rx="660" ry="222"/>
+        <circle class="drop" r="5" cy="-8"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <p class="mf-kicker">The endowment at the heart of the Living Treasury</p>
+      <h1 class="mf-title">The Mother Fund</h1>
+      <p class="mf-sub">A living promise to generations yet to come</p>
+      <p class="mf-question">What might this gift continue to make possible for generations we will never meet?</p>
+      <p class="mf-lead">The Mother Fund is the perpetual, endowment-oriented philanthropic current within Naluʻea’s Living Treasury, held through the Naluʻea Foundation, a perpetual charitable stewardship vessel being established as a Liechtenstein <i>Stiftung</i>.</p>
+      <p class="mf-lead">She transforms generosity from a series of isolated transactions into an enduring current of care: receiving, protecting, stewarding and circulating philanthropic wealth so that a gift given once keeps nourishing Life across generations, including the essential work whose value no financial return can capture.</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" type="button" data-scroll="mf-story">Discover Her Story</button>
+        <button class="btn btn-quiet" type="button" data-scroll="mf-seed">Offer a Founding Seed</button>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path class="w2" d="M0,30 C200,70 420,0 720,34 C1000,66 1220,10 1440,36 L1440,80 L0,80Z"/><path class="w1" d="M0,50 C260,80 470,22 760,50 C1040,78 1250,30 1440,54 L1440,80 L0,80Z"/></svg>
+  </section>
+
+  <!-- 2 · Born in the Waters -->
+  <section id="mf-story" class="mf-born">
+    <div class="wrap split">
+      <div class="prose">
+        <p class="kicker">Her origin story</p>
+        <h2>Born in the Waters</h2>
+        <p class="lede">On the September Equinox of 2026, beside the waters of Interlaken, Switzerland, women gathered in ceremony with Grandmothers to welcome the spiritual birth of the Mother Fund, honoring the ancestors, living traditions, lands and waters, and the children whose faces we may never see.</p>
+        <p class="mf-litany">That wealth might remember its belonging to Life.<br>That resources might become currents of care.</p>
+        <p>The Mother Fund was welcomed through ceremony before Her institutional form was complete, allowing purpose to guide the architecture that would come to hold it.</p>
+      </div>
+      <!-- Photo slot: add <img src="images/mother-fund/interlaken.jpg" alt="…"> inside .mf-photo to replace the water art. -->
+      <figure class="mf-photo" aria-label="The waters of Interlaken">
+        <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="mf-lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9DDC3"/><stop offset=".42" stop-color="#C7B691"/><stop offset=".43" stop-color="#5E8C8A"/><stop offset="1" stop-color="#1F4A55"/></linearGradient>
+          </defs>
+          <rect width="500" height="600" fill="url(#mf-lake)"/>
+          <path d="M0 255 L70 175 L120 215 L190 120 L250 190 L310 140 L380 210 L430 170 L500 230 L500 258 L0 258Z" fill="#8D9A93" opacity=".55"/>
+          <path d="M0 258 L90 205 L160 240 L240 190 L330 235 L410 200 L500 245 L500 258Z" fill="#6C7E7A" opacity=".55"/>
+          <g fill="none" stroke="#F1E7CF" stroke-opacity=".5">
+            <ellipse cx="250" cy="420" rx="40" ry="8"/><ellipse cx="250" cy="420" rx="95" ry="19"/><ellipse cx="250" cy="420" rx="160" ry="32"/><ellipse cx="250" cy="420" rx="235" ry="47" stroke-opacity=".3"/>
+          </g>
+          <circle cx="250" cy="90" r="26" fill="#F3D9A0" opacity=".85"/>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3 · Wealth That Remembers Its Belonging -->
+  <section class="mf-belonging">
+    <div class="wrap mf-center">
+      <p class="kicker">The deeper purpose</p>
+      <h2>Wealth That Remembers Its Belonging</h2>
+      <p class="mf-big-q">What if wealth were understood not only through what it accumulates, but through what it continues to nourish?</p>
+      <div class="prose mf-center-prose">
+        <p>The Mother Fund invites a longer horizon of generosity, one that reaches beyond individual lifetimes, institutional cycles and immediate outcomes.</p>
+        <p>Some resources are stewarded for future generations. Others flow toward the needs and possibilities of the present. Together, they form an enduring commitment to the flourishing of Life.</p>
+        <p>The Mother Fund makes space for work that is essential to our collective future, yet whose value cannot always be expressed through financial returns.</p>
+        <p class="mf-emph">She exists to nourish Life, not to require Life to justify its worth through financial performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Held Across Generations -->
+  <section class="mf-generations">
+    <div class="wrap">
+      <div class="split" style="margin-bottom:2rem">
+        <div class="prose">
+          <p class="kicker">The wisdom of Grandmothers and the imagination of Youth</p>
+          <h2>Held Across Generations</h2>
+        </div>
+        <div class="prose">
+          <p class="lede">Indigenous Grandmothers are stepping in to hold the highest integrity of the Mother Fund, carrying memory, discernment and responsibility for generations yet to come, alongside the imagination of Youth.</p>
+        </div>
+      </div>
+      <figure class="mf-gen-art"><img loading="lazy" decoding="async" src="images/mother-fund/held-across-generations.jpg" width="1200" height="1200" alt="At dawn beside a flowing stream, a Grandmother, two women and two children kneel together to plant a glowing seed; golden roots spread into the water, where the faces of ancestors and future generations shimmer."></figure>
+      <div class="mf-arc">
+        <div class="mf-arc-side"><span class="mf-arc-mark" aria-hidden="true"></span><h3>Ancestral memory</h3><p>The wisdom of those who carry the memory of the ancestors, and the discernment of long experience.</p></div>
+        <div class="mf-arc-heart" aria-hidden="true"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="16"/><circle cx="60" cy="60" r="32"/><circle cx="60" cy="60" r="50"/></svg></div>
+        <div class="mf-arc-side"><span class="mf-arc-mark" aria-hidden="true"></span><h3>Generations yet to come</h3><p>The voices of those who will inherit the consequences of the decisions we make today.</p></div>
+      </div>
+      <p class="mf-center-line">The Mother Fund seeks to hold these perspectives in living relationship. Communities retain authority over their own priorities, knowledge, traditions and protocols.</p>
+      <!-- Steward profiles appear here only once added to MF_STEWARDS in the script, with each person's consent. -->
+      <div class="mf-stewards" id="mf-stewards" hidden></div>
+    </div>
+  </section>
+
+  <!-- 5 · What She Nourishes -->
+  <section class="mf-nourish">
+    <div class="wrap">
+      <div class="mf-center">
+        <p class="kicker">Six interconnected expressions of Life</p>
+        <h2>What She Nourishes</h2>
+      </div>
+      <div class="mf-pebbles">
+        <div class="pebble p1"><h3>Living Ecosystems</h3><p>Regenerated lands, waters, biodiversity and living ecosystems.</p></div>
+        <div class="pebble p2"><h3>Community Sovereignty</h3><p>The sovereignty, wellbeing and resilience of communities.</p></div>
+        <div class="pebble p3"><h3>Living Wisdom</h3><p>Indigenous wisdom, cultural continuity and sacred knowledge.</p></div>
+        <div class="pebble p4"><h3>Future Generations</h3><p>Children, youth, families and intergenerational learning.</p></div>
+        <div class="pebble p5"><h3>Regenerative Economies</h3><p>Regenerative livelihoods, food systems and economies of reciprocity.</p></div>
+        <div class="pebble p6"><h3>The Work of Care</h3><p>Healing, relationship, care and restoration.</p></div>
+      </div>
+      <p class="mf-center-line">These are not isolated funding categories. They are interconnected expressions of the flourishing of Life.</p>
+      <div class="btn-row mf-center-row">
+        <a class="btn btn-quiet" href="#nodes">Meet the Living Nodes</a>
+        <a class="btn btn-quiet" href="#domains">Explore the 12 Domains</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · The Seven Living Vows -->
+  <section class="mf-vows-sec">
+    <div class="wrap">
+      <div class="mf-center">
+        <p class="kicker">Her ethical compass</p>
+        <h2>The Seven Living Vows</h2>
+        <p class="prose mf-center-prose">The Mother Fund is guided by seven living vows. No vow stands above another; together they form one interconnected ethical compass.</p>
+      </div>
+      <div class="mf-vows" id="mf-vows">
+        <svg class="mf-vow-rings" viewBox="0 0 600 600" aria-hidden="true"><circle cx="300" cy="300" r="250"/><circle cx="300" cy="300" r="180"/><circle cx="300" cy="300" r="112"/></svg>
+        <div class="mf-vow-center" aria-hidden="true"><span>The Mother Fund</span></div>
+        <ol class="mf-vow-list" id="mf-vow-list"></ol>
+      </div>
+      <p class="mf-center-line"><a href="#constitution">Read the Living Constitution</a></p>
+    </div>
+  </section>
+
+  <!-- 7 · How Generosity Becomes Enduring Care -->
+  <section class="mf-arch">
+    <div class="wrap">
+      <div class="split" style="margin-bottom:2rem">
+        <div class="prose">
+          <p class="kicker">The architecture that protects the purpose</p>
+          <h2>How Generosity Becomes Enduring Care</h2>
+        </div>
+        <div class="prose">
+          <p>The Mother Fund is being established as the perpetual philanthropic endowment within Naluʻea’s Living Treasury, through the Naluʻea Foundation in Liechtenstein.</p>
+          <p>Its architecture is intended to protect philanthropic resources, honor the intentions through which they are entrusted, and enable their responsible circulation across generations.</p>
+        </div>
+      </div>
+      <ol class="mf-current" aria-label="The intended flow of the Mother Fund">
+        <li>Generosity</li><li>Protection</li><li>Stewardship</li><li>Regenerative Circulation</li><li>Flourishing Life</li>
+      </ol>
+      <div class="mf-commit">
+        <div><h3>Governance</h3><p>Defined stewardship roles, fiduciary oversight and transparent decisions, while communities retain authority over their own priorities and protocols.</p></div>
+        <div><h3>Financial Protection</h3><p>Designated resources documented, separated and used as agreed, with oversight, reporting and safeguards.</p></div>
+        <div><h3>Regenerative Allocation</h3><p>Some resources held for future generations, others flowing toward immediate priorities, agreed with each community.</p></div>
+        <div><h3>Relationship</h3><p>Ongoing dialogue with communities, with accountability flowing in both directions.</p></div>
+      </div>
+      <p class="small soft mf-center-line">This expresses the intended stewardship architecture as it is being established, rather than an operational financial product.</p>
+      <div class="btn-row mf-center-row">
+        <a class="btn btn-quiet" href="#system">The Living Treasury</a>
+        <a class="btn btn-quiet" href="#participate">Capital Participation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · Offer a Founding Seed -->
+  <section class="mf-seed" id="mf-seed">
+    <div class="wrap mf-center">
+      <p class="kicker">An invitation into relationship</p>
+      <h2>Offer a Founding Seed</h2>
+      <div class="prose mf-center-prose">
+        <p class="lede">Individuals, families, foundations and aligned institutions are invited into the founding of the Mother Fund.</p>
+        <p>A seed may be a financial gift, fiduciary wisdom, an introduction, time or a blessing. There are many forms of wealth, and many ways to participate in the flourishing of Life.</p>
+        <p>We welcome those who feel called to help establish an enduring current of care for generations yet to come.</p>
+      </div>
+      <div class="btn-row mf-center-row">
+        <a class="btn btn-primary" href="#connect" data-prefill="motherfund">Enter into Relationship</a>
+        <a class="btn btn-quiet" href="#system">Explore the Living Treasury</a>
+        <a class="btn btn-quiet" id="mf-brief-link" href="#" target="_blank" rel="noopener" hidden>Download the Mother Fund brief</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · A Closing Blessing -->
+  <section class="mf-blessing">
+    <svg class="mf-ripples" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g class="mf-rings" transform="translate(720 300)">
+        <ellipse class="r r2" rx="140" ry="46"/><ellipse class="r r3" rx="260" ry="86"/><ellipse class="r r4" rx="400" ry="132"/><ellipse class="r r5" rx="560" ry="186"/><ellipse class="r r6" rx="740" ry="246"/>
+      </g>
+    </svg>
+    <div class="wrap mf-center">
+      <p class="mf-prayer">May our spirit guide our form.<br>May our form protect our purpose.<br>May our purpose remain in service to all Life.</p>
+      <p class="mf-final">Capital is one form of nourishment. Life is the purpose.</p>
+    </div>
+  </section>
+</div>
+
 <div class="view" id="v-nodes" data-title="Living Nodes · Naluʻea">
   <div class="page-intro has-art"><div class="wrap">
     <p class="kicker">Living Nodes and pathways in motion</p>
@@ -1458,6 +1770,8 @@ footer p{max-width:70ch}
 const CONFIG = {
   // Where contact messages go.
   contactEmail: "info@nalueaministry.earth",
+  // Optional: link to a downloadable Mother Fund brief (PDF). Leave empty to hide the button.
+  motherFundBriefUrl: "",
   contactName: "the Naluʻea team",
   // If this file is hosted on your own website, paste a form-service endpoint here
   // (for example a Formspree URL). Submissions are then sent automatically to the team.
@@ -1752,6 +2066,7 @@ const PEOPLE = {
 })();
 const NEXT_STEPS = [
   {id:"call", title:"Request a call", desc:"A conversation with a member of the team."},
+  {id:"motherfund", title:"Enter into relationship with the Mother Fund", desc:"Offer a founding seed or learn more about the Mother Fund."},
   {id:"packet", title:"Access the deeper information packet", desc:"Detailed documents, including the draft Investment Policy Statement."},
   {id:"node", title:"Learn more about a Living Node", desc:"Meet the people and places behind a specific pathway."},
   {id:"expertise", title:"Contribute expertise", desc:"Offer your skills, knowledge or networks."},
@@ -1785,15 +2100,17 @@ $$("dialog").forEach(d => {
 });
 
 /* ---------- Routing ---------- */
-const VIEWS = ["home","system","constitution","participate","nodes","domains","arc","infrastructure","ixo","arcos","stewards","connect"];
+const VIEWS = ["home","system","constitution","participate","mother-fund","nodes","domains","arc","infrastructure","ixo","arcos","stewards","connect"];
 const NAV_PARENT = {ixo:"infrastructure", arcos:"infrastructure"};
 let pendingPrefill = null;
+const DEFAULT_DESC = (document.querySelector('meta[name="description"]') || {}).content || "";
 function route(){
   let h = (location.hash || "#home").slice(1);
   if (!VIEWS.includes(h)) h = "home";
   $$(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + h));
   $$(".nav a").forEach(a => { if (a.getAttribute("href") === "#" + (NAV_PARENT[h] || h)) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
   document.title = $("#v-" + h).dataset.title;
+  const md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", $("#v-" + h).dataset.desc || DEFAULT_DESC);
   $("#nav").classList.remove("open"); $(".menu-btn").setAttribute("aria-expanded","false");
   window.scrollTo(0,0);
   if (h === "connect" && pendingPrefill){ prefill(pendingPrefill); pendingPrefill = null; }
@@ -2225,6 +2542,35 @@ const MILESTONES = [
   $("#ms-next").addEventListener("click", () => sc.scrollBy({left:COL*2, behavior:"smooth"}));
   const onRoute = () => { if (location.hash === "#arc") requestAnimationFrame(() => toToday(false)); };
   window.addEventListener("hashchange", onRoute); onRoute();
+})();
+
+/* ---------- The Mother Fund ---------- */
+// Each vow can later carry its own narrative: add text to "story".
+const MF_VOWS = [
+  {name:"Life First", story:""}, {name:"Integrity", story:""}, {name:"Intergenerational Responsibility", story:""},
+  {name:"Sovereignty", story:""}, {name:"Relationship as Living Wealth", story:""}, {name:"Distributed Power", story:""},
+  {name:"Transparency with Discernment", story:""}
+];
+// Grandmother, Youth and founding steward profiles, added only with each person's consent:
+// {name:"", role:"", photo:"images/mother-fund/....jpg", line:""}
+const MF_STEWARDS = [];
+(function(){
+  const roman = ["I","II","III","IV","V","VI","VII"];
+  $("#mf-vow-list").innerHTML = MF_VOWS.map((v,i) => {
+    const a = -Math.PI/2 + i * 2*Math.PI/MF_VOWS.length;
+    return `<li class="mf-vow" style="--x:${Math.cos(a).toFixed(4)};--y:${Math.sin(a).toFixed(4)}"><span class="num">${roman[i]}</span><span class="name">${esc(v.name)}</span>${v.story ? `<p>${esc(v.story)}</p>` : ""}</li>`;
+  }).join("");
+  if (MF_STEWARDS.length){
+    const box = $("#mf-stewards"); box.hidden = false;
+    box.innerHTML = MF_STEWARDS.map(s => `<div class="mf-steward">${s.photo ? `<img loading="lazy" decoding="async" src="${esc(s.photo)}" alt="Portrait of ${esc(s.name)}">` : ""}<h3>${esc(s.name)}</h3><p class="soft">${esc(s.role || "")}</p>${s.line ? `<p>${esc(s.line)}</p>` : ""}</div>`).join("");
+  }
+  if (CONFIG.motherFundBriefUrl){ const b = $("#mf-brief-link"); b.href = CONFIG.motherFundBriefUrl; b.hidden = false; }
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-scroll]"); if (!b) return;
+    const t = document.getElementById(b.dataset.scroll); if (!t) return;
+    t.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+    t.setAttribute("tabindex","-1"); t.focus({preventScroll:true});
+  });
 })();
 
 route();
